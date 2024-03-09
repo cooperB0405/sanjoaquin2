@@ -15,7 +15,8 @@ html {
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 800px;
+	max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     border: 3px solid #931420;
     background-color: #fffded;
@@ -39,7 +40,7 @@ header {
 	align-items: center;
 }
 header h2 {
-	font-size: 175%;
+	font-size: 200%;
 	color: #800000;
 }
 header h3 {
@@ -47,7 +48,7 @@ header h3 {
 	font-style: italic;
 }
 header img {
-	padding: 0 30px;
+	padding: 0 3em;
 }
 .shadow {
 	text-shadow: 2px 2px 2px #800000;
@@ -81,7 +82,7 @@ main {
 }
 /* the styles for the section */
 section {
-	width: 525px;
+	width: 80%;
 	padding: 0 20px 20px 20px;
 }
 section h1 {
@@ -129,7 +130,7 @@ article img {
 
 /* the styles for the aside */
 aside {
-	width: 215px;
+	width: 20%;
 	padding: 0 0 20px 20px;
 }
 aside h2 {
@@ -154,4 +155,41 @@ footer p {
 	text-align: center;
 	color: white;
 	padding: 1em 0;
+}
+#mobilemenu { 
+	display: none; 
+}  
+
+/*----------------------------------
+            MEDIA QUERIES
+----------------------------------*/
+
+@media only screen and (max-width:900px){
+    body{
+        box-shadow: none;
+        font-size: 90%;
+    }
+}
+@media (max-width:767px){
+	main{
+		flex-direction: column;
+		align-items: center;
+	}
+	section, aside{
+		width: 95%;
+	}
+	#mobilemenu { 
+		display: block;
+	}
+	#nav_menu { 
+		display: none; 
+	}
+	.slicknav_menu{
+		background-color: #800000;
+	}
+}
+@media (max-width: 479px){
+	header h2, header h3, p{
+		font-size: 95%;
+	}
 }
